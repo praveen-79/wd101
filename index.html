@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        .container2 {
+            background-color: #0fbe4c;
+            border: 1px solid #1a1818;
+            width: 50vh;
+            margin: 0 auto;
+            padding: 30px;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 70vh;
+            border-collapse: collapse;
+            text-align: right;
+        }
+        th, td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.897);
+        }
+        button {
+            background-color: rgb(0, 128, 128);
+            padding-top: 7px;
+        }
+
+        /* Added the following style definition */
+        .container1 {
+            background-color: #e8ebe9;
+            border: 1px solid #1a1818;
+            width: 70vh;
+            margin: 20px auto;
+            padding: 30px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container2">
+            <center>
+                <h2>Registration form</h2>
+                <form id="my-form">
+                    <label for="name">Name</label>
+                    <input required type="text" id="name" name="Name" placeholder="Enter full name">
+                    <br><br>
+
+                    <label for="email">Email</label>
+                    <input required type="email" id="email" name="Email" placeholder="Enter email">
+                    <br><br>
+
+                    <label for="password">Password</label>
+                    <input required type="password" id="password" name="Password" placeholder="Enter password">
+                    <br><br>
+
+                    <label for="dob">Dob</label>
+                    <input required type="date" id="dob" name="Dob" min="1968-11-19" max="2005-11-19"/>
+                    <br><br>
+                    <input required type="checkbox" id="termsConditions" name="acceptTerms">
+                    <label for="acceptTerms">Acceptterms & Conditions</label>
+                    <br><br>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </center>
+        </div>
+    </div>
+
+    <div>
+        <center>
+            
+            <div class="container1">
+                <h2>Entries</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Dob</th>
+                            <th>Accepted terms?</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-entries"></tbody>
+                </table>
+            </div>
+        </center>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
